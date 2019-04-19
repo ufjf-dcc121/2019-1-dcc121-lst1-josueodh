@@ -10,7 +10,15 @@
     <p id="nome"></p>
     <p id="sobrenome"></p>
     <h1 id="nomecompleto"></h1>
-    <script></script>
+    <script>
+        var nome = document.getElementById("nome");
+        nome.textContent = "Josué";
+        var sobrenome = document.getElementById("sobrenome");
+        sobrenome.textContent = "de Oliveira Delgado Heringer";
+        var nomecompleto = document.getElementById("nomecompleto");
+        nomecompleto.innerHTML ="Bem vindo " +  nome.innerText + " " + sobrenome.innerText + "!";
+
+    </script>
 </body>
 
 </html>
