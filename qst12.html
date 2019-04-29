@@ -7,21 +7,20 @@
 </head>
 
 <body>
-    <div id="x"> 7 </div>
-    <div id="y"> 5 </div>
-    <div id="produto">35</div>
-    <div id="soma">12</div>
+    <div id="x"> 8 </div>
+    <div id="y"> 13 </div>
+    <div id="produto"></div>
+    <div id="soma"></div>
     <script>
-        document.getElementById("x");
-        document.getElementById("y");
-        document.getElementById("soma");
-        document.getElementById("produto");
-        document.body.innerHTML = "O produto de " + document.getElementById("x").innerText + " e " +
-            document.getElementById("y").innerText + " é " +
-            document.getElementById("produto").innerText + "! " + "A soma de " +
-            document.getElementById("x").innerText + " e " +
-            document.getElementById("y").innerText + " é " +
-            document.getElementById("soma").innerText + "!";
+        var x = document.getElementById("x").innerText;
+        var y = document.getElementById("y").innerText;
+        var produto = x * y;
+        var soma = parseFloat(x) + parseFloat(y)
+        document.body.innerHTML = "O produto de " + x + " e " + y + " é " +
+            produto + "! " + "A soma de " +
+            x + " e " +
+            y + " é " +
+            soma + "!";
 
     </script>
 
