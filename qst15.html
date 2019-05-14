@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Qst15</title>
+</head>
+
+<body>
+    <main>
+        <h1>Resultado da Avaliação</h1>
+        <p>Olá <span id="nome" contentEditable="true">Fulano</span>, você está matriculado há <span id="anos"
+                contentEditable="true">2</span>anos no curso de Confeitaria e as notas das suas disciplinas são:<span
+                id="confeitarias" contentEditable="true">0</span> em Confeitaria Básica;
+            <span id="coberturas" contentEditable="true">80</span> em Coberturas e <span id="bolos"
+                contentEditable="true">60</span>
+            em Broas e Bolos.</p>
+        <p id="resultado"></p><button id="botaoAvaliar">Avaliar</button><button id="botaoLimpar">Limpar</button>
+        <p id="melhorias"></p>
+    </main>
+    <script>
+        var nome = document.getElementById("nome");
+        var anos = document.getElementById("anos");
+        var coberturas = document.getElementById("coberturas");
+        var bolos = document.getElementById("bolos");
+        var botaoAvaliar = document.getElementById("botaoAvaliar");
+        var botaoLimpar = document.getElementById("botaoLimpar");
+        var resultado = document.getElementById("resultado");
+        var melhorias = document.getElementById("melhorias");
+       
+        var media  = 60;
+        botaoLimpar.addEventListener("click", function limparClick(){
+            resultado.textContent = "";
+            melhorias.textContent = "";
+        });
+        botaoAvaliar.addEventListener("click" , function avaliarClick(){
+                if(media < 60 ){
+                    resultado.textContent = "Você foi reprovado com media 50!";
+                }else{
+                    resultado.textContent = " Parabéns Fulado! Você está aprovado com média " + media +  "!"
+                }
+        });
+
+    </script>
+</body>
+
+</html>
